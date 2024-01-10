@@ -16,7 +16,7 @@ const Fetch = ({ tag }) => {
         const day = d.getDate() - 1;
         const date = `${year}-${month}-${day}`;
 
-        const apiKey = `https://newsapi.org/v2/everything?q=${tag}&from=${date}&sortBy=popularity&apiKey=00afeefb8f884913b6a9683c15c83685`;
+        const apiKey = `https://newsapi.org/v2/everything?q=${tag}&from=${date}&sortBy=popularity&apiKey={apiKey}`;
         console.log(apiKey);
 
         const response = await fetch(apiKey);
